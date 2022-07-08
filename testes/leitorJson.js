@@ -18,7 +18,7 @@ fs.readFile('./artur.json', {encoding: 'utf-8'}, (err, dados) => {
 
         //salvando alteracoes no arquivo
         fs.writeFile(
-            './artur.json', // arquivo a ser escrito
+            './testes/artur.json', // arquivo a ser escrito
             JSON.stringify(content), (err) => { /// transforma json em texto para ser escrito no arquivo
                 if (err) {
                     console.log(`Erro ao alterar o arquivo detalhes >>> ${err}`);
