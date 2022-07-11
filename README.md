@@ -5,10 +5,11 @@
 * javascript
 * nodejs
 * ejs
+* git
 
 ## Descrição
 
-projeto que le csv transforma os dados em html, excel e pdf
+Projeto em node que le csv transforma os dados em html, excel e pdf
 
 ## install require
 
