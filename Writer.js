@@ -5,8 +5,17 @@ class Write {
     
     constructor() {
         // transformado um callback em uma promise com promisify
-        this.reader = util.promisify(fs.writeFile);
+        this.write = util.promisify(fs.writeFile);
+    }
+
+    async writer(filename, data) {
+        try {
+            await this.write(filename, data);
+            return false;
+        } catch (error) {
+            return false;
+        }
     }
 }
 
-module.exports = HtmlParser;
+module.exports = Write;

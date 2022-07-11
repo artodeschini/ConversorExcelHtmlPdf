@@ -1,9 +1,11 @@
 const Reader = require('./Reader');
+const Write = require('./Writer');
 const Process = require('./Processor');
 const Table = require('./Table');
 const HtmlParser = require('./HtmlParser');
 
 let reader = new Reader();
+let writer = new Write()
 
 async function main() {
     let data = await reader.Reader('./users.csv');
@@ -14,7 +16,8 @@ async function main() {
     console.log(`a tabela tem ${uruarios.ColumnCount} colunas`);
     
     let html = await HtmlParser.Parser(uruarios);
-    console.log(html);
+    //console.log(html);
+    writer.writer(Date.now() + '.html', html);
 }
 
 main();
